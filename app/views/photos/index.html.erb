@@ -8,13 +8,21 @@
     <div class="card" style="width: 20rem;">
       <img class="card-img-top" src="<%= photo.image_url %>" alt="Card image cap">
       <div class="card-body">
-        <h4 class="card-title">Card title</h4>
+        <h4 class="card-title"><%= photo.user.username %></h4>
+        <%= link_to like_photo_path(photo), method: :put do %>
+          Upvote
+          <%= photo.get_upvotes.size %>
+        <% end %>
         <p class="card-text"><%= photo.caption %></p>
         <%= link_to 'Show', photo %>
         <%= link_to 'Edit', edit_photo_path(photo) %>
         <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     </div>
+
+
+
+
     <% end %>
 
 <br>
