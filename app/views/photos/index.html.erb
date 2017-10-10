@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Photos</h1>
+
+    <% @photos.each do |photo| %>
+
+
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src="<%= photo.image_url %>" alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text"><%= photo.caption %></p>
+        <%= link_to 'Show', photo %>
+        <%= link_to 'Edit', edit_photo_path(photo) %>
+        <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Photo', new_photo_path %>
