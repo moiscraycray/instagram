@@ -2,8 +2,8 @@
 
 <%= image_tag @photo.image_url %>
 
-<%= @comments.each do |comment| %>
-  <li><%= @comments.content %></li>
+<% @comments.each do |comment| %>
+  <li><%= comment.content %></li>
 <% end %>
 
 
