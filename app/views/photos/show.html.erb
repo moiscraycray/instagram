@@ -25,7 +25,7 @@
 <h3>Comments</h3>
 
 <% @comments.each do |comment| %>
-  <li><%= comment.user %><%= comment.content %></li>
+  <p><%= comment.user_id %> said: <%= comment.content %></p>
 <% end %>
 
 <%# render partial: 'comments/form', locals: { comment: @comment } %>
@@ -39,3 +39,13 @@
     <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
+
+<!-- <%# if @profile.user == current user %>
+  <%# link_to 'Edit Profile', edit_profile_path(@profile) %>
+  <%# else %>
+    <%# form_with(model: @profile.user, method: :patch) %>
+<%# end %> -->
+<%# form_with(model: [@profile.user]) do |form| %>
+  <%# form.hidden_field :toggle_follow, value: true %>
+  <%# form.button 'click me' %>
+<%# end %>
