@@ -7,20 +7,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/bbdaecabea.js"></script> 
   </head>
 
   <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <%= link_to "instagram", root_path, id: "logo" %>
-        <nav class="justify-content-end">
-          <ul class="nav justify-content-end navbar-nav">
-            <li class="nav-item"><%= render 'partials/login_items' %></li>
-            <li class="nav-item"><%= render 'partials/new_photo' %></li>
-          </ul>
-        </nav>
-      </div>
-    </nav>
+    <%= render 'partials/nav' %>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <ul class="hmenu">

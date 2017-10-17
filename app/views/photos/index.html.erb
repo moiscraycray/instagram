@@ -23,7 +23,7 @@
 
             <% @comments = photo.comments %>
             <% @comments.each do |comment| %>
-              <li><%= comment.user %><%= comment.content %></li>
+              <li><%= comment.user_id %> said: <%= comment.content %></li>
             <% end %>
 
           </div>

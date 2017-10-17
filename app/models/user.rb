@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :photos
   has_many :comments
+  has_one :profile
 
   # The people who follow us
   has_and_belongs_to_many :followers, class_name: 'User', join_table: :followers,
@@ -30,5 +31,5 @@ class User < ApplicationRecord
       followers << user
     end
   end
-  
+
 end
