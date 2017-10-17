@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   root to: 'photos#index'
 
+  resources :users, only: [:show, :update], controller: :profiles
+  resource :profile
+
   resources :photos do
     resources :comments
     member do
